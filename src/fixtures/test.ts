@@ -1,5 +1,5 @@
 import { test as base } from '@playwright/test';
-import { DocsHomePage } from '@pages/docs-home.page';
+import { DocsHomePage } from '@web-pages/docs-home.page';
 import { PostsApi } from '@api/posts.api';
 
 type TestFixtures = {

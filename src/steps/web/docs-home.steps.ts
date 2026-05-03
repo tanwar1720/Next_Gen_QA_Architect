@@ -1,6 +1,6 @@
 import { Given, Then, When } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
-import { DocsHomePage } from '@pages/docs-home.page';
+import { DocsHomePage } from '@web-pages/docs-home.page';
 import type { BddWorld } from '@bdd/world';
 
 Given('I open the documentation home page', async function (this: BddWorld) {

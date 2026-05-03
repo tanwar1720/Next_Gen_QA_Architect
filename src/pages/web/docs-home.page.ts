@@ -1,10 +1,13 @@
 import type { Locator, Page } from '@playwright/test';
+import { selectors } from '@utils/selectors';
 
 export class DocsHomePage {
   readonly getStartedLink: Locator;
 
   constructor(private readonly page: Page) {
-    this.getStartedLink = page.getByRole('link', { name: 'Get started' }).first();
+    const $ = selectors(page);
+
+    this.getStartedLink = $.first($.byRole('link', { name: 'Get started' }));
   }
 
   async goto(): Promise<void> {

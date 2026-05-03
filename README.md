@@ -22,7 +22,9 @@ src/
   api/          API clients and request helpers
   config/       Environment and runtime configuration
   fixtures/     Shared Playwright fixtures
-  pages/        Page objects for web journeys
+  pages/        Page objects grouped by channel
+    web/
+    mobile-web/
   utils/        Test data and common utilities
 tests/
   api/          API specs
@@ -66,6 +68,31 @@ npm run test:debug
 npm run report
 npm run typecheck
 ```
+
+## CI
+
+GitHub Actions workflow:
+
+```text
+.github/workflows/qa-automation.yml
+```
+
+The workflow runs on pushes and pull requests to `main` or `master`, and can also be started manually from the Actions tab.
+
+It runs:
+
+```bash
+npm ci
+npx playwright install --with-deps
+npm run typecheck
+npm test
+npm run bdd
+```
+
+Reports and test artifacts are uploaded from:
+
+- `playwright-report/`
+- `test-results/`
 
 ## Cucumber / Gherkin
 
