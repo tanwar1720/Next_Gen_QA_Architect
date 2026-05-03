@@ -1,0 +1,43 @@
+{
+  "name": "next-gen-qa-architect",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Next generation QA automation framework for web, API, and mobile web testing.",
+  "scripts": {
+    "install:browsers": "playwright install",
+    "test": "playwright test",
+    "test:web": "playwright test tests/web",
+    "test:api": "playwright test tests/api",
+    "test:mobile": "playwright test tests/mobile-web",
+    "bdd": "cucumber-js",
+    "bdd:web": "cucumber-js \"features/web/**/*.feature\"",
+    "bdd:api": "cucumber-js \"features/api/**/*.feature\"",
+    "bdd:mobile": "cucumber-js \"features/mobile-web/**/*.feature\"",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "automation",
+    "qa",
+    "api-testing",
+    "mobile-testing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.8.2",
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.3",
+    "dotenv": "^17.4.2",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.8.3"
+  }
+}
